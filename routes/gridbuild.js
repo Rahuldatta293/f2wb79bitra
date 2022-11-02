@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
   let query = req.query
@@ -8,7 +7,7 @@ router.get('/', function(req, res, next) {
   console.log(`cols ${query.cols}`)
   rows=query.rows;
   cols=query.cols;
-  res.render('index', { title: 'Grid Build', query: query});
+  res.render('gridbuild', { title: 'Grid Build', query: query});
 });
 
 module.exports = router;

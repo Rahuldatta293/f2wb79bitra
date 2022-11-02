@@ -2,10 +2,9 @@ extends layout
 
 block content
   h1= title
-  
   p Rows: #{query.rows}, Columns: #{query.cols}
-  - var rows=Number(query.rows);
-  - var cols=Number(query.cols);
+  - var rows=Number(query.rows=6);
+  - var cols=Number(query.cols=4);
   if !Number.isInteger(rows)
     p Entered rows value is not an integer 
   else if !Number.isInteger(cols)
@@ -25,3 +24,4 @@ block content
                 td= " "
             -}
       - }
+  
