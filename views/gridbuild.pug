@@ -3,8 +3,8 @@ extends layout
 block content
   h1= title
   p Rows: #{query.rows}, Columns: #{query.cols}
-  - var rows=Number(query.rows=6);
-  - var cols=Number(query.cols=4);
+  - var rows=Number(query.rows);
+  - var cols=Number(query.cols);
   if !Number.isInteger(rows)
     p Entered rows value is not an integer 
   else if !Number.isInteger(cols)
@@ -19,9 +19,6 @@ block content
           tr#middle
             - for(let j=0; j<cols; j++) {
                 td= 1 + i + j*rows
-                td= " "
-                td= " "
-                td= " "
             -}
       - }
   
